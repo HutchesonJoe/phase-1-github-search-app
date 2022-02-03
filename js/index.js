@@ -5,6 +5,7 @@ function handleSubmit(e){
   //GET RID OF v THIS AT THE END
   e.preventDefault()
   let searchInput = e.target[0].value
+  e.target.reset()
  // debugger
   let gitSearch = fetch(`https://api.github.com/search/users?q=${searchInput}`, {
     method: 'GET',
